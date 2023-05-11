@@ -11,9 +11,66 @@
 <body>
   <script>
     // Grab all the text from a web page
+    const text = `f you’ve always wanted to try surfing but aren’t sure where to begin, start by booking a trip to California, where catching a wave isn’t just a local hobby—it’s the official state sport.
+
+“Up and down the coast you’ll find big waves and small, which have given me the perfect variety to learn, train, and perform on,” says longtime surfer Sage Erickson. “I also love the diverse climate and landscapes—sometimes right by the mountains or beautiful sandy beaches. California has it all.”
+
+“The California coastline is the ultimate place to be raised as a surfer,” says surfer Alexander Gray. “California's mild climate provides great ocean water temperature and surf conditions year-round.”
+
+We talked to a collection of local experts to glean advice on the best way to start surfing while on a California vacation. Here’s what they said.
+f you’ve always wanted to try surfing but aren’t sure where to begin, start by booking a trip to California, where catching a wave isn’t just a local hobby—it’s the official state sport.
+
+“Up and down the coast you’ll find big waves and small, which have given me the perfect variety to learn, train, and perform on,” says longtime surfer Sage Erickson. “I also love the diverse climate and landscapes—sometimes right by the mountains or beautiful sandy beaches. California has it all.”
+
+“The California coastline is the ultimate place to be raised as a surfer,” says surfer Alexander Gray. “California's mild climate provides great ocean water temperature and surf conditions year-round.”
+
+We talked to a collection of local experts to glean advice on the best way to start surfing while on a California vacation. Here’s what they said.
+Take a lesson.
+“Lessons are great for beginners!” says Anna Ehrgott. “Gather some friends and find a teacher to point you in the right direction. The guidelines a surfer can instill will take you far once you start going out on your own.”
+
+Dani Burt, who learned how to surf after losing her leg in a motorcycle crash 15 years ago, suggests Surf Education Academy in La Jolla Shores. “They offer programs for surfers of all levels and abilities and have expertise catering towards all populations, including adaptive surfing,” Burt says. “Sean Brody, the owner, was also one of the coaches for Team USA during the world championships.”
+
+“Pick a surf instructor to show you the ropes of the local breaks,” suggests Teddy Navarro. “[He or she] can also lend a helping hand in places to eat, shop, and things to do.”
+Don’t give up after your first try.
+“Go more than once!” Barnick urges. “The first time will likely be the hardest, so just know that going into it and don’t get too discouraged on your first try. If you have several opportunities to meet up with an instructor (or even strike out on your own) during your visit to California, do it! Your muscles may not love it, but your skills will improve a little bit with every attempt.”
+
+If you do head out on your own, “Start small!” Erickson advises. “I look for rolling, slow-paced waves like Mondos Beach in Ventura or San Onofre in San Clemente.”
+
+Remember that catching a wave isn’t everything.
+“Standing up isn’t the end-all be-all of the surfing experience,” says Barnick. “So much of my enjoyment of surfing comes from just being out in the water. Even if you don’t get to stand up yet, just take a moment to enjoy being in the ocean, and appreciate its loveliness.”
+
+“There is so much more [to surfing] than just athletic ability,” Ehrgott echoes. “Getting to spend time in nature and on California's coastline slows time down and gives surfers something to appreciate every day.”
+
+Check out the local surf shops.
+To experience the full spectrum of surf culture, stop by local shops to stock up on cool t-shirts, ask questions, and learn about nearby breaks and gear. We’ve gathered this collection of seven classic surf shops, but our team of experts also suggest the following (with many more where that came from): Bird’s Surf Shed, Aloha Beach Club, and Bing Surf Shop in San Diego County; Thalia Surf in Laguna Beach; HSS and 17th St. Board Shop in Huntington Beach; Iron and Resin, a mixture of motorcycles, surf, and outdoor gear in Ventura and San Francisco; Revolution Surf and Skate in Camarillo and Ventura; Traveler Surf Club in Malibu; Wavelengths in Morro Bay; and Esteem Surf Co. in Pismo Beach.
+`
+let everything = text.split('')
+
+const finalAmount = []
     // Count how many times each letter and number occurs
 
 
+everything = everything.filter(item => 
+  item.match(/[a-zA-Z0-9]/i) ? true : false
+  
+).map(letter => letter.toLowerCase()).sort()
+//.filter: filtering out anything that is not a letter or number using regex
+//.map: mapping over each item in the array and turning to lowercase
+// .sort: sort alphabetically, remember numbers come first
+
+console.log(everything)
+
+// const count = everything.reduce((letter, currentLetter)=>{
+//  letter === currentLetter ? console.log(`${currentLetter}: ${letter}`) : null;
+// })
+const count = everything.reduce((letter, currentLetter)=> {
+  
+  letter[currentLetter] 
+  ? letter[currentLetter] = letter[currentLetter] +1
+  :letter[currentLetter] = 1
+  return letter;
+},{})
+console.log(count)
   </script>
 </body>
 
